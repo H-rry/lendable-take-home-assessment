@@ -1,0 +1,18 @@
+1) Bolt - 1924
+2) 2.6 days
+3) North
+4) ELECTRONICS
+5) The category with the worst (highest) refund_rate is Clothing
+┌─────────────┬─────────────────────┐
+│  category   │     refund_rate     │
+│   varchar   │       double        │
+├─────────────┼─────────────────────┤
+│ Clothing    │ 0.09451096367289359 │
+│ Toys        │ 0.08988043501595502 │
+│ Sports      │  0.0802102866952149 │
+│ Home        │ 0.07335253056639057 │
+│ Electronics │ 0.07300352252949228 │
+└─────────────┴─────────────────────┘
+6)
+7) Arrow 2.43%
+8) Arrow - Electronics (Assumed every order only has one parcel)

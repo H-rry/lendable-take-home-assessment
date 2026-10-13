@@ -18,4 +18,5 @@ SELECT o.category, sum(r.order_id)/sum(o.order_id) as refund_rate FROM orders o 
 -- s1 q7
 SELECT s.courier, (sum(r.order_id)/sum(s.order_id)) * 100 as refund_percentage FROM shipments s LEFT JOIN refunds r ON r.order_id=s.order_id WHERE s.status='Returned'  GROUP BY s.courier ORDER BY refund_percentage ASC;
 -- s1 q8
+SELECT s.courier, o.category, (sum(o.order_value - coalesce(r.refund_amount,0)))/count(s.shipment_id) as net_rev FROM orders o JOIN shipments s ON s.order_id=o.order_id LEFT JOIN refunds r ON r.order_id=o.order_id GROUP BY courier, category ORDER BY net_rev DESC;
 
